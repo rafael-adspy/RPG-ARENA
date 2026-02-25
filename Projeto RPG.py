@@ -1,15 +1,12 @@
-print(f'{"RPG-ARENA":=^20}')
-from random import randint
 from time import sleep
+print(f'{"RPG-ARENA":=^20}')
 print(f'{"R":_^5}')
 sleep(1)
 print(f'{"P":_^11}')
 sleep(1)
 print(f'{"G":_^17}')
 sleep(1)
-print('CARREGANDO...')
-sleep(2)
-print(f'{"RPG-ARENA":=^34}')
+print(f'{"RPG-ARENA":=^32}')
 print('AGUARDE...')
 r1 = '='
 for w in range(1, 19):
@@ -17,9 +14,8 @@ for w in range(1, 19):
     print(r1, end=' ')
 menu = input('''
 [1] PERSONAGENS
-[2] BATALHAS
-[3] SOBRE
-[4] SAIR
+[2] SOBRE
+[3] SAIR
 Selecione a opção: ''')
 if menu == '1':
     char = input('''
@@ -38,7 +34,7 @@ if menu == '1':
         Ataque	20	Poderoso com magia à distância
         Defesa	5	Baixa resistência física
         ''')
-    if char == '2':
+    elif char == '2':
         print(f'NINJA...')
         sleep(2)
         print('''
@@ -50,12 +46,27 @@ if menu == '1':
         Ataque	15	Ataque rápido, não tão forte quanto o mago
         Defesa	7	Média, consegue suportar alguns ataques
         ''')
-    if char == '3':
+    elif char == '3':
         print('GUERREIRO')
         print('''Atributo	Valor	Observação
         Vida	110	Maior resistência, suporta mais ataques
         Ataque	15	Dano médio, confiável em combates diretos
         Defesa	12	Forte, reduz consideravelmente o dano recebido
         ''')
+    else:
+        print('Opção Invalida')
+elif menu == '2':
+    print(f'''RPG-ARENA é um jogo desenvolvido em Python com foco em lógica de programação e evolução contínua.
+O projeto foi criado com o objetivo de praticar conceitos fundamentais como estruturas condicionais, loops, listas, funções e organização de código.
+O jogador pode escolher entre três personagens iniciais:
+🧙‍♂️ Mago Negro – Alto poder mágico, ataque intenso e estratégia.
+{"="*70}
+🥷 Ninja – Agilidade extrema e alta chance de esquiva.
+{"="*55}
+⚔️ Guerreiro – Força e resistência equilibradas para combate direto.
+{"="*70}
+Cada personagem possui atributos próprios de vida, ataque, defesa e habilidades especiais, proporcionando diferentes estilos de jogo.''')
+
+
 
         
